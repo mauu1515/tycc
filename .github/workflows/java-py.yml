@@ -13,12 +13,34 @@ jobs:
       # Checkout repository code 
       - name: Checkout code 
         uses: actions/checkout@v4 
-        
+ 
+      # Set up Java 17 
+      - name: Set up Java 
+        uses: actions/setup-java@v4 
+        with: 
+          distribution: 'temurin' 
+          java-version: '17' 
+ 
+      # Compile both Java files 
+      - name: Compile Java Programs 
+        run: javac ProgramOne.java ProgramTwo.java 
+ 
+      # Run first Java program 
+      - name: Run ProgramOne 
+        run: java ProgramOne 
+ 
+      # Run second Java program 
+      - name: Run ProgramTwo 
+        run: java ProgramTwo 
+ 
+      # Set up Python 
       - name: Set up Python 
         uses: actions/setup-python@v5 
         with: 
           python-version: '3.10' 
  
       # Run first Python script 
-      - name: Run hello.py 
+      - name: Run script_one.py 
         run: python hello.py 
+# Run second Python script - name: Run script_two.py 
+      - run: python script_two.py
