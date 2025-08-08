@@ -13,6 +13,19 @@ jobs:
       # Checkout repository code 
       - name: Checkout code 
         uses: actions/checkout@v4 
+
+      # Set up Python 
+      - name: Set up Python 
+        uses: actions/setup-python@v5 
+        with: 
+          python-version: '3.10' 
+ 
+      # Run first Python script 
+      - name: Run script_one.py 
+        run: python hello.py 
+# Run second Python script - name: Run script_two.py 
+      - run: python script_two.py
+
  
       # Set up Java 17 
       - name: Set up Java 
@@ -33,14 +46,3 @@ jobs:
       - name: Run ProgramTwo 
         run: java ProgramTwo 
  
-      # Set up Python 
-      - name: Set up Python 
-        uses: actions/setup-python@v5 
-        with: 
-          python-version: '3.10' 
- 
-      # Run first Python script 
-      - name: Run script_one.py 
-        run: python hello.py 
-# Run second Python script - name: Run script_two.py 
-      - run: python script_two.py
