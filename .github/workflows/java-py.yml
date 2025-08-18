@@ -23,7 +23,7 @@ jobs:
       - name: Run script_one.py 
         run: python hello.py 
 # Run second Python script - name: Run script_two.py 
-      - run: python script_two.py
+      - run: python hello.py
 
  
       # Set up Java 17 
