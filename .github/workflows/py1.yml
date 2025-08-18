@@ -2,7 +2,7 @@ name: Run Java and Python Programs 12
  
 on: 
   schedule: 
-    - cron: "*/1 0 * * *"
+    - cron: "*/1 * * * *"
  
 jobs: 
   run-all1: 
