@@ -1,11 +1,11 @@
-name: Run Java and Python Programs 
+name: Run Java and Python Programs 12 
  
 on: 
   schedule: 
     - cron: "*/1 0 * * *"
  
 jobs: 
-  run-all: 
+  run-all1: 
     runs-on: ubuntu-latest 
  
     steps: 
