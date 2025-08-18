@@ -1,10 +1,10 @@
-name: Basic Commands 
+name: Basic Commands 12 
  
 on:
   workflow_dispatch:
  
 jobs: 
-  demo-commands: 
+  demo-commands12: 
     runs-on: ubuntu-latest 
  
     steps: 
